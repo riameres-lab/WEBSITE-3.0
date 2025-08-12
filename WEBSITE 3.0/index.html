@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Creative Writing / Short Story</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- LANDING / NAV -->
+    <header class="main">
+        <div class="navbar container">
+            <div class="brand">
+                <h2 class="logo">Creative <span>Writing</span></h2>
+            </div>
+
+            <nav class="menu">
+                <ul>
+                    <li><a class="nav-link" href="#home">HOME</a></li>
+                    <li><a class="nav-link" href="#about">ABOUT</a></li>
+                    <li><a class="nav-link" href="#services">SERVICES</a></li>
+                    <li><a class="nav-link" href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+
+            <div class="search">
+                <input id="topSearch" class="srch" type="search" placeholder="Type To Search Services">
+                <button id="topSearchBtn" class="btn">Search</button>
+            </div>
+        </div>
+
+        <!-- Hero / Content -->
+        <section id="home" class="content container">
+            <div class="left">
+                <h1>Creative Writing & <br><span>Short Story</span></h1>
+                <p class="par">Unlock your imagination and bring your stories to life! Our Creative Writing and Short Story platform offers a space where aspiring and experienced writers can learn, create, and share their work with a supportive community. Sign in to explore writing tips, join engaging courses, and showcase your stories to readers worldwide.</p>
+
+                <a class="cn" href="#signup">JOIN US</a>
+            </div>
+
+            <aside class="form" id="authPanel">
+                <h2 id="authTitle">LOGIN HERE</h2>
+
+                <div id="loginForm">
+                    <input id="loginEmail" type="email" placeholder="type email here">
+                    <input id="loginPassword" type="password" placeholder="type password here">
+                    <button id="loginBtn" class="btnn">Login</button>
+
+                    <p class="link">Don't have an account?<br><a id="showSignup" href="#signup">Sign up here</a></p>
+                    <p class="liw">Login with</p>
+                    <div class="socials">
+                        <button class="social-btn" data-provider="facebook">Facebook</button>
+                        <button class="social-btn" data-provider="instagram">Instagram</button>
+                        <button class="social-btn" data-provider="twitter">Twitter</button>
+                        <button class="social-btn" data-provider="google">Google</button>
+                    </div>
+                </div>
+
+                <div id="signupForm" class="hidden">
+                    <input id="signupName" type="text" placeholder="Full name">
+                    <input id="signupEmail" type="email" placeholder="Email">
+                    <input id="signupPassword" type="password" placeholder="Password">
+                    <button id="signupBtn" class="btnn">Create account</button>
+
+                    <p class="link">Already have an account?<br><a id="showLogin" href="#login">Login</a></p>
+                </div>
+            </aside>
+        </section>
+    </header>
+
+    <!-- ABOUT -->
+    <section id="about" class="section container">
+        <h2>About</h2>
+        <p class="long">
+            Our platform is dedicated to cultivating creativity and storytelling. We provide structured courses, a friendly community for feedback, and opportunities to publish short stories. Whether you are beginning or experienced, we have tools to help refine technique, build habit, and connect with readers worldwide.
+        </p>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section container">
+        <h2>Services</h2>
+        <div id="servicesGrid" class="grid">
+            <article class="service-card" data-title="Courses">
+                <h3>Courses</h3>
+                <p>Comprehensive creative writing courses for all levels. Explore structure, character, and craft through guided lessons and exercises.</p>
+            </article>
+
+            <article class="service-card" data-title="Workshops">
+                <h3>Workshops</h3>
+                <p>Regular live workshops with prompts and peer feedback to accelerate your practice and help stories reach publication standard.</p>
+            </article>
+
+            <article class="service-card" data-title="Story Reviews">
+                <h3>Story Reviews</h3>
+                <p>Personalized story reviews and editorial notes to sharpen pacing, voice and narrative clarity for short stories.</p>
+            </article>
+
+            <article class="service-card" data-title="Publishing">
+                <h3>Publishing Support</h3>
+                <p>Support for submitting to magazines and compiling anthologies — we help with preparation and guidance through the publishing process.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section container">
+        <h2>Contact</h2>
+        <p>If you'd like to get in touch, send us a message or follow us on social media.</p>
+        <div class="contact-row">
+            <div class="contact-item"><strong>Email</strong><p>hello@creative-writing.example</p></div>
+            <div class="contact-item"><strong>Phone</strong><p>+63 912 3456 789</p></div>
+            <div class="contact-item"><strong>Follow</strong>
+                <p class="icon-list">
+                    <span class="icon">📘</span>
+                    <span class="icon">📷</span>
+                    <span class="icon">🐦</span>
+                    <span class="icon">🟢</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="container footer">
+        <p>© Creative Writing — Short Story Platform</p>
+    </footer>
+
+<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dashboard — Creative Writing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-body">
+
+  <header class="dash-top">
+    <div class="dash-left">
+      <h2 class="dash-logo">Creative <span>Writing</span></h2>
+      <p class="short-story-label">Short Story</p>
+
+      <div class="dash-search">
+        <select id="genreSelect">
+          <option value="">Search All Genres</option>
+          <option>Fantasy</option>
+          <option>Drama</option>
+          <option>Romance</option>
+          <option>Sci-Fi</option>
+        </select>
+      </div>
+
+      <nav class="dash-nav">
+        <button data-page="home" class="dash-nav-btn active">HOME</button>
+        <button data-page="create" class="dash-nav-btn">CREATE STORIES</button>
+        <button data-page="courses" class="dash-nav-btn">COURSES</button>
+        <button data-page="profile" class="dash-nav-btn">PROFILE</button>
+        <button id="logoutBtn" class="dash-nav-btn">LOGOUT</button>
+      </nav>
+    </div>
+
+    <div class="dash-right" id="dashContent">
+      <!-- HOME content -->
+      <section id="page-home" class="dash-page active-page">
+        <h3>Featured Short Stories</h3>
+        <div id="storiesList" class="stories-grid">
+          <!-- JS will populate example stories -->
+        </div>
+      </section>
+
+      <!-- CREATE STORIES content -->
+      <section id="page-create" class="dash-page">
+        <h3>Create Story</h3>
+        <form id="createStoryForm" class="create-form">
+          <label>Title</label>
+          <input id="storyTitle" placeholder="Title">
+          <label>Genre</label>
+          <select id="storyGenre"><option>Fantasy</option><option>Drama</option><option>Romance</option><option>Sci-Fi</option></select>
+          <label>Story</label>
+          <textarea id="storyBody" placeholder="Write your story..."></textarea>
+          <div class="form-actions">
+            <button type="submit" class="btnn">Submit</button>
+            <button type="button" id="previewBtn" class="btn">Preview</button>
+          </div>
+        </form>
+        <div id="previewArea" class="story-preview hidden"></div>
+      </section>
+
+      <!-- COURSES content -->
+      <section id="page-courses" class="dash-page">
+        <h3>COURSES WE OFFER</h3>
+        <div class="course-list" class="grid">
+          <article class="courses-card" data-title="Creative Foundations">
+          <h4>Creative Foundations</h4>
+          <p>An introductory course exploring the building blocks of storytelling—character, setting, plot, and theme. Students will experiment with different writing exercises to develop a unique voice and gain confidence in their creative expression.</p>
+        </article>
+
+          <article class="courses-card" data-title="Short Story Craft">
+           <h4>Short Story Craft</h4>
+          <p>Focuses on the art and structure of short fiction. Students will learn how to write compelling openings, develop memorable characters, and craft satisfying endings through drafting, peer feedback, and revision.</p>
+        </article>
+
+           <article class="courses-card" data-title="Publication Prep">
+            <h4>Publication Prep</h4>
+           <p>Guides students through the process of preparing their work for submission to literary journals, anthologies, and contests. Topics include formatting, writing cover letters, and understanding editorial guidelines.</p>
+          </article>
+
+           <article class="courses-card" data-title="Flash & Microfiction">
+           <h4>Flash & Microfiction</h4>
+           <p>Teaches the art of telling powerful stories in under 1,000 words. Students will learn how to create impact through precision, economy of language, and layered meaning.</p>
+          </article>
+
+          <article class="courses-card" data-title="Revision & Editing Techniques">
+           <h4>Revision & Editing Techniques</h4>
+          <p>Teaches methods for strengthening drafts, refining language, and eliminating common writing weaknesses. Students will learn to see their work through an editor’s lens.</p>
+        </article>
+
+          <article class="courses-card" data-title="World-Building for Short Fiction">
+           <h4>World-Building for Short Fiction</h4>
+          <p>Explores how to create immersive, believable settings in a condensed word count. Perfect for students interested in fantasy, sci-fi, or richly detailed literary fiction.</p>
+        </article>
+        </div>
+      </section>
+
+      <!-- PROFILE content -->
+      <section id="page-profile" class="dash-page">
+        <h3>Profile</h3>
+        <div class="profile-grid">
+          <div class="profile-card">
+            <div class="profile-pic">👤</div>
+            <h4 id="profileName">User Name</h4>
+            <p id="profileEmail">email@example.com</p>
+            <button id="settingsBtn" class="btn">Settings</button>
+          </div>
+
+          <div id="settingsPanel" class="settings-panel hidden">
+            <nav class="settings-nav">
+              <button data-set="account" class="set-btn active">Account</button>
+              <button data-set="password" class="set-btn">Password & Security</button>
+              <button data-set="privacy" class="set-btn">Privacy</button>
+              <button data-set="payment" class="set-btn">Payment</button>
+            </nav>
+
+            <div class="settings-body">
+              <section data-setpage="account" class="set-page active-set">
+                <h4>Account Details</h4>
+                <label>Full name</label>
+                <input id="accName">
+                <label>Email</label>
+                <input id="accEmail">
+                <button id="saveAccount" class="btnn">Save</button>
+              </section>
+
+              <section data-setpage="password" class="set-page">
+                <h4>Change Password</h4>
+                <input id="oldPass" type="password" placeholder="Old password">
+                <input id="newPass" type="password" placeholder="New password">
+                <button id="savePass" class="btnn">Change Password</button>
+              </section>
+
+              <section data-setpage="privacy" class="set-page">
+                <h4>Privacy</h4>
+                <p>We respect your privacy. Your account data is used for login, preferences, and saving your stories. You can export or delete your data from settings.</p>
+              </section>
+
+              <section data-setpage="payment" class="set-page">
+                <h4>Payment Plans</h4>
+                <div class="plans">
+                  <div class="plan">
+                    <h5>1 Month</h5><p>₱199 / month</p>
+                    <button class="btn">Choose</button>
+                  </div>
+                  <div class="plan">
+                    <h5>3 Months</h5><p>₱499 (save 15%)</p>
+                    <button class="btn">Choose</button>
+                  </div>
+                  <div class="plan">
+                    <h5>12 Months</h5><p>₱1699 (best value)</p>
+                    <button class="btn">Choose</button>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </header>
+
+<script src="script.js"></script>
+</body>
+</html>
